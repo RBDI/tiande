@@ -1,5 +1,5 @@
 <?
-$title='Тианде XXXX';
+$title='Тианде ';
  
 ?>
 <!DOCTYPE html>
