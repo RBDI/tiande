@@ -65,7 +65,9 @@ function get_block_image ($parent=0)
   print '/simg/'.$current_block[$parent]['background'];
 }
 
-function get_catch ($x=0, $id=0){
+function get_catch ($parent=0){
+  global $current_block;
+  $x=$current_block[$parent]['catch'];
   if ($x==1){
     $out='
 <div class="well" align="center">
@@ -93,10 +95,10 @@ function get_catch ($x=0, $id=0){
     ';
   }
   elseif ($x==2){
-    $out='<button type="button" class="btn btn-success btn-lg fbtn" style="margin-top:30px;" data-toggle="modal" href="#zayavka">Подать заявку <span style="font-size:0.7em;" class="glyphicon glyphicon-play"></span></button>';
+    $out='<button type="button" class="btn btn-success btn-md myfont" data-toggle="modal" href="#zayavka">Выбрать <i class="fa fa-angle-double-right"></i></button>';
   }
   
-  return $out;
+  print $out;
 }
 
 $t_path="template/".$l_template;

@@ -6,7 +6,7 @@ function get_form(){
   $N++;
 ?>
 <div class="well" align="center">
-<h3>Отправьте заявку на аренду плазменной панели</h3>
+<h3>Отправьте заявку на получение карты умного покупателя</h3>
 <form class="form-horizontal" role="form">
   <div class="form-group">
     <div class="col-md-12">
@@ -19,8 +19,14 @@ function get_form(){
     </div>
   </div>  
   <div class="form-group">
+    <div class="col-md-12">  
+  <input type="text" class="form-control" id="inputEmail_order<? print $N; ?>" placeholder="Введите email">
+    </div>
+  </div>  
+
+  <div class="form-group">
     <div class="col-md-12">
-  <button type="button" class="btn btn-success btn-lg myfont" onclick="return send_order('order<? print $N; ?>')">Отправить</button>
+  <button type="button" class="btn btn-success btn-lg myfont" onclick="return send_order('order<? print $N; ?>')">Получить карту <i class="fa fa-angle-double-right"></i></button>
     </div>
   </div>  
 </form>
