@@ -80,7 +80,7 @@ function get_form(){
           </div>
             <div class="form-group">
               <div class="col-md-offset-3 col-md-8 blueb">
-                <button type="button" class="btn btn-success btn-md myfont" onclick="backcall();" >Перезвоните мне</button>
+                <button type="button" class="btn btn-success btn-md myfont" onclick="backcall();" ><i class="fa fa-phone"></i> Перезвоните мне</button>
               </div>
             </div>            
         </form>
@@ -119,9 +119,15 @@ function get_form(){
               <input type="text" class="form-control" name="inputContact_zayavka" id="inputContact_zayavka" placeholder="Ваш телефон">
             </div>
           </div>
+          <div class="form-group">
+            <label for="inputEmail_zayavka" class="col-md-3 control-label">Email</label>
+            <div class="col-md-8">
+              <input type="text" class="form-control" name="inputEmail_zayavka" id="inputEmail_zayavka" placeholder="Ваш email">
+            </div>
+          </div>          
             <div class="form-group">
               <div class="col-md-offset-3 col-md-8 blueb">
-                <button type="button" class="btn btn-success btn-lg myfont" style="font-size:25px;" onclick="zayavka();" >Отправить заявку</button>
+                <button type="button" class="btn btn-success btn-lg myfont" style="font-size:25px;" onclick="zayavka();" >Отправить заявку <i class="fa fa-angle-double-right"></i></button>
                 <div class="myfont" style="font-size:16px; font-weight:300; margin-top:10px;">Мы перезвоним вам для уточнения деталей и объясним порядок дальнейших действий.</div>
               </div>
 

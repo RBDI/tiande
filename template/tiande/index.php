@@ -31,6 +31,7 @@
 
 <!-- Header -->
 <? next_block(); ?>
+<div class="block1" style="background-image:url(/simg/block1_background_.jpg)">
 <header>
   <div class="container">
     <div class="row">
@@ -38,7 +39,7 @@
         <a href=""><img src="<? print get_block_image();  ?>" class="img-responsive" alt="Аренда плазменных панелей" title="Аренда плазменных панелей"></a>
         <? get_block_title(); ?>
       </div>
-      <div class="col-md-7 sc" align="center">
+      <div class="col-md-7 sc myfont" align="center">
         <? get_block_text(); ?>
       </div>
       <div class="col-md-3" align="center">
@@ -55,19 +56,19 @@
 
 <!-- First screen -->
 <? next_block(); ?>
-<div class="block1" style="background-image:url(<? print get_block_image();  ?>)">
   <div class="container">
     <div class="row">
       <div class="col-sm-8">
         <h1><? get_block_title(); ?></h1>
         <div class="row">
           <? next_block(get_block_id()); ?>
-          <div class="col-sm-6">
+          <div class="col-sm-6 col-sm-offset-3">
             <img src="<? print get_block_image(get_block_id());  ?>" class="img-responsive">
             <p class="subh"><? get_block_title(get_block_id()); ?></p>
           </div>
           <? next_block(get_block_id()); ?>
-          <div class="col-sm-6 arr" style="background-image:url(<? print get_block_image(get_block_id());  ?>)"><h3><? get_block_title(get_block_id()); ?></h3></div>
+          <!-- <div class="col-sm-6 arr" style="background-image:url(<? print get_block_image(get_block_id());  ?>)"><h3><? get_block_title(get_block_id()); ?></h3></div> -->
+           <div class="col-sm-3 arr" style="background-image:url(/simg/arr2.png);  ?>)"></div>
         </div>
         
         <!-- <h3><? get_block_text(); ?></h3> -->
@@ -85,51 +86,109 @@
   <div class="container">
     <h2><? get_block_title(); ?></h2>
     <p class="info"><? get_block_text(); ?></p>
-    <div class="row">
-      <? next_block(get_block_id()); ?>
-      <div class="col-sm-6">
-        <h3><? get_block_title(get_block_id()); ?></h3>
-        <? get_catch(get_block_id()); ?>
-        <p><? get_block_text(get_block_id()); ?></p>
-        <script src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=Yh6Smhl1ZoFXhDbBrPBLgOj-HpAgaJtQ&amp;width=100%&amp;height=200" charset="utf-8"></script></p>
 
-      </div>
+    <div class="row adress">
       <? next_block(get_block_id()); ?>
       <div class="col-sm-6">
-        <h3><? get_block_title(get_block_id()); ?></h3>
-        <? get_catch(get_block_id()); ?>
-        <p><? get_block_text(get_block_id()); ?></p>
-        <script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=w3bi8FhXVyVgP6Khbb14mFB0q080xe6b&#038;width=100%&#038;height=200"></script>
-      </div>
-    </div>
-    <div class="row">
-      <? next_block(get_block_id()); ?>
-      <div class="col-sm-6">
-        <h3><? get_block_title(get_block_id()); ?></h3>
-        <? get_catch(get_block_id()); ?>
-        <p><? get_block_text(get_block_id()); ?></p>
-        <script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=UEdNbE24_EuxiLWnCfwzM3PlTT-ICNRQ&#038;width=100%&#038;height=200"></script>
-      </div> 
-      <? next_block(get_block_id()); ?>
-      <div class="col-sm-6">
-        <h3><? get_block_title(get_block_id()); ?></h3>
-        <? get_catch(get_block_id()); ?>
-        <p><? get_block_text(get_block_id()); ?></p>
-        <iframe src="http://tiandespb.ru/contacts/showmap/153299/1" id="ymap-1" style="width:100%;height:200px;" marginheight="0" marginwidth="0" frameborder="0" data-host="nethouse.ru" data-lang="ru_RU"></iframe>
-      </div> 
-    </div>
-    <div class="row">          
-          <div class="col-sm-6">
-            <img src="/simg/ph1.jpg" class="img-responsive">
+        <h3><? get_block_title(get_block_id()); ?></h3>        
+        
+        <div class="row">
+          <div class="col-sm-8">
+            <p><? get_block_text(get_block_id()); ?></p>
+            <div class="metro"> 50 метров от <img src="/simg/spb_metro_logo.svg"></div>
           </div>
-          <div class="col-sm-6">
-            <img src="/simg/ph2.jpg" class="img-responsive">
+          <div class="col-sm-4">
+            <? get_catch(get_block_id()); ?>
+          </div>
+        </div>  
+      </div>
+      <div class="col-sm-6">                
+        <script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=8pxL4RLveNUTirSd7vskIOpGZ4afjqU4&width=100%&height=200"></script>
+      </div>
+    </div>
+    <div class="row adress">
+      <? next_block(get_block_id()); ?>
+      <div class="col-sm-6">
+        <h3><? get_block_title(get_block_id()); ?></h3>
+        
+        <div class="row">
+          <div class="col-sm-8">
+            <p><? get_block_text(get_block_id()); ?></p>
+            <div class="metro"> 100 метров от <img src="/simg/spb_metro_logo.svg"></div>
+          </div>
+          <div class="col-sm-4">
+            <? get_catch(get_block_id()); ?>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=IMG5o7h5DoGhtV9Mt33LwXok7y4y9sH6&width=100%&height=200"></script>        
+      </div>
+    </div>
+
+    <div class="row adress">
+      <? next_block(get_block_id()); ?>
+      <div class="col-sm-6">
+        <h3><? get_block_title(get_block_id()); ?></h3>        
+        
+        <div class="row">
+          <div class="col-sm-8">
+            <p><? get_block_text(get_block_id()); ?></p>
+            <div class="metro"> 100 метров от <img src="/simg/spb_metro_logo.svg"></div>
+          </div>
+          <div class="col-sm-4">
+            <? get_catch(get_block_id()); ?>
+          </div>
+        </div>        
+      </div>
+      <div class="col-sm-6">
+        <script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=rfesh9mvoHw1cmU60pn11dQ2-lmAjtuD&width=100%&height=200"></script>
+      </div>
+    </div>  
+    <div class="row adress">    
+      <? next_block(get_block_id()); ?>
+      <div class="col-sm-6">
+        <h3><? get_block_title(get_block_id()); ?></h3>                
+        <div class="row">
+          <div class="col-sm-8">
+            <p><? get_block_text(get_block_id()); ?></p>
+            <!-- <div class="metro"> 100 метров от <img src="/simg/spb_metro_logo.svg"></div> -->
+          </div>
+          <div class="col-sm-4">
+            <? get_catch(get_block_id()); ?>
+          </div>
+        </div>  
+      </div> 
+      <div class="col-sm-6">
+        <script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=Tt0aIuwlYSPbEgY63CWqiRIrMphjhhll&width=100%&height=200"></script>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top:20px;">
+          <h3>В наших сервисных центрах всегда уютная атмосфера, а дружелюбные сотрудники ответят на Ваши вопросы и помогут в выборе продукта!</h3>          
+          <div class="col-sm-4">
+            <img src="/simg/ph1.jpg" class="img-responsive img-rounded">
+          </div>
+          <div class="col-sm-4">
+            <!-- <img src="/simg/ph2.jpg" class="img-responsive img-rounded"> -->
+            <img src="/simg/girl.png" height="370" >
+          </div>
+          <div class="col-sm-4">
+            <img src="/simg/ph3.jpg" class="img-responsive img-rounded">
           </div>
     </div>
-    <div class="row" style="margin-top:40px;">
-      <div class="col-sm-6 col-sm-offset-3">
+    <h2  style="margin-top:40px;">Не нашли удобный для Вас адрес? Курьер быстро доставит Ваш заказ!</h2>
+      <button type="button" class="btn btn-success btn-lg myfont" data-toggle="modal" href="#zayavka">Закзать <i class="fa fa-angle-double-right"></i></button>
+    <div class="row"  style="margin-top:40px;">
+      <div class="col-sm-4">
+        <img src="/simg/girl2.png" class="img-responsive">
+      </div>
+      <div class="col-sm-4">
         <? get_form(); ?>
       </div>
+      <div class="col-sm-4">
+        <img src="/simg/girl3.png" class="img-responsive"  style="margin-top:100px;">
+      </div>      
     </div>
   </div>
 </div>

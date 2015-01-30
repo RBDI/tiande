@@ -1,8 +1,9 @@
 body{
 	color: #111;
+	background: #dcf1ff;
 }
 
-h1, h2, h3, h4, .myfont{
+h1, h2, h3, h4, .myfont, .metro{
 	font-family: 'Roboto Condensed', 'sans-serif';
 }
 
@@ -17,6 +18,8 @@ header{
 	/*background-image: url(../img/head-bg.jpg);
 	background-size: cover;
 	background-position: top center;*/
+	background: rgba(255,255,255,0.8);
+	margin-bottom: 100px;
 
 
 }
@@ -31,7 +34,9 @@ header{
 .sc {
 	margin-top: 20px;
 	color: #666;
-	font-size: 16px;
+	font-size: 24px;
+	line-height: 27px;
+	/*font-weight: bold;*/
 }
 .phone{
 	font-size: 37px;
@@ -44,14 +49,14 @@ header{
 .block1 {
 	background-size: cover;
 	background-position: center center;
-	padding: 100px 0px 50px;
+	padding: 0px 0px 70px;
 	/*color: #0055ac;*/
 	color: #FFF;
 	/*text-align: center;*/
 }
 
 .block1 h1 {
-	font-size: 50px;
+	font-size: 49px;
 	margin-top: 0px;
 	margin-bottom: 30px;
 	text-shadow:2px 0px 5px #333;
@@ -71,17 +76,40 @@ header{
 	/*background-size: cover;*/
 	background-repeat: no-repeat;
 	background-position: center center;	
-	padding: 75px 30px;
+	/*padding: 75px 30px;*/
+	height: 235px;
 }
 .arr h3{
 	font-size: 30px;
 }
 
+.metro {
+	/*margin-top: 10px;*/
+	/*background: #EEE;*/
+	display: inline-block;
+	padding: 7px;
+	border-radius: 5px;
+	border: 1px solid #0055ac;
+	color: #0055ac;
+	font-size: 20px;
+	/*font-size: 0.9em;*/
+}
+
+.metro img{
+	width: 30px;
+	margin-top: -5px;
+}
 
 .block2 {
 	text-align: center;
-	padding: 30px 0px 30px;
-	/*background: url(../img/shadow.png) top center no-repeat #EEE;*/	
+	padding: 30px 0px 0px;
+	
+}
+.block2 .adress {
+	margin-bottom: 10px;
+	border-bottom: 1px solid #CCC ;
+	padding-bottom: 10px;
+	text-align: left;
 }
 .block2 h2, .block2 h3 {
 	color: #0055ac;
