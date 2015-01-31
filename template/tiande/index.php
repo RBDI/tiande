@@ -36,7 +36,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-2 logo" align="center">
-        <a href=""><img src="<? print get_block_image();  ?>" class="img-responsive" alt="Аренда плазменных панелей" title="Аренда плазменных панелей"></a>
+        <a href=""><img src="<? print get_block_image();  ?>" class="img-responsive"></a>
         <? get_block_title(); ?>
       </div>
       <div class="col-md-7 sc myfont" align="center">
@@ -62,7 +62,7 @@
         <h1><? get_block_title(); ?></h1>
         <div class="row">
           <? next_block(get_block_id()); ?>
-          <div class="col-sm-6 col-sm-offset-3">
+          <div class="col-sm-7 col-sm-offset-2">
             <img src="<? print get_block_image(get_block_id());  ?>" class="img-responsive">
             <p class="subh"><? get_block_title(get_block_id()); ?></p>
           </div>
@@ -165,29 +165,51 @@
     </div>
 
     <div class="row" style="margin-top:20px;">
-          <h3>В наших сервисных центрах всегда уютная атмосфера, а дружелюбные сотрудники ответят на Ваши вопросы и помогут в выборе продукта!</h3>          
+          <h3>В наших сервисных центрах всегда уютная атмосфера, а дружелюбные сотрудники<br> ответят на Ваши вопросы и помогут в выборе продукта!</h3>
+
           <div class="col-sm-4">
-            <img src="/simg/ph1.jpg" class="img-responsive img-rounded">
+            <img src="/simg/ph1.jpg" class="img-responsive img-circle">
           </div>
           <div class="col-sm-4">
             <!-- <img src="/simg/ph2.jpg" class="img-responsive img-rounded"> -->
-            <img src="/simg/girl.png" height="370" >
+            <img src="/simg/girlx.jpg" class="img-responsive img-circle">
           </div>
           <div class="col-sm-4">
-            <img src="/simg/ph3.jpg" class="img-responsive img-rounded">
+            <img src="/simg/ph2.jpg" class="img-responsive img-circle">
           </div>
     </div>
-    <h2  style="margin-top:40px;">Не нашли удобный для Вас адрес? Курьер быстро доставит Ваш заказ!</h2>
-      <button type="button" class="btn btn-success btn-lg myfont" data-toggle="modal" href="#zayavka">Закзать <i class="fa fa-angle-double-right"></i></button>
+    <h3>Выбирая наши Сервисные и Дилерские Центры у Вас:<br>
+- нет рисков,  нет обязательств, продукция сертифицирована и гарантия возврата денег!</h3>
+  </div>
+</div>
+
+<div class="block4">
+  <div class="container" >
+    <div class="row">
+      <div class="col-sm-3">
+        <img src="/simg/courier.png" class="img-responsive">
+      </div>
+      <div class="col-sm-9">
+        <h2  style="margin-top:40px;">Не нашли удобный для Вас адрес?<br>
+       Наш курьер быстро доставит Вам заказ!</h2>
+        <a class="btn btn-success btn-lg myfont" target="_blank" href="http://rustiande.ru">Заказать <i class="fa fa-angle-double-right"></i></a>
+      </div>    
+    </div>
+  </div>
+</div>
+
+<div class="block2">
+  <div class="container" align="center">
+    <h2 style="font-size:60px;">Стать умным покупателем прямо сейчас!</h2>
     <div class="row"  style="margin-top:40px;">
       <div class="col-sm-4">
-        <img src="/simg/girl2.png" class="img-responsive">
+        <img src="/simg/x1.jpg" class="img-responsive"  style="margin-top:40px;">
       </div>
       <div class="col-sm-4">
         <? get_form(); ?>
       </div>
       <div class="col-sm-4">
-        <img src="/simg/girl3.png" class="img-responsive"  style="margin-top:100px;">
+        <img src="/simg/x2.jpg" class="img-responsive"  style="margin-top:40px;">
       </div>      
     </div>
   </div>
