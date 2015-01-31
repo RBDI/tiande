@@ -33,12 +33,13 @@ function backcall(){
 	var isvalid, name, contact;
 	isvalid= Validate('backcall');
 	if (isvalid) {		
-		document.getElementById("backcall_form").style.display="none";
-		document.getElementById("backcall_success").style.display="block";
+		$("#backcall_form").hide();
+		$("#backcall_success").show();
 
-		name=document.getElementById("inputName_backcall").value;
-		contact=document.getElementById("inputContact_backcall").value;
-		$.post("sendmail.php", { nm: name, cntc: contact, type: 1}, function(data){	});
+		name=$("#inputName_backcall").val();
+		contact=$("#inputContact_backcall").val();
+		var slug=$('#slug').val();
+		$.post("sendmail.php", { nm: name, cntc: contact, type: 1, slug:slug}, function(data){	});
 		setTimeout("$('#Backcall').modal('hide')",1000);
 		setTimeout("refresh_backcall()",2000);
 		return true;
@@ -52,12 +53,14 @@ function zayavka(){
 	var isvalid, name, contact;
 	isvalid= Validate('zayavka');
 	if (isvalid) {		
-		document.getElementById("zayavka_form").style.display="none";
-		document.getElementById("zayavka_success").style.display="block";
+		$("#zayavka_form").hide();
+		$("#zayavka_success").show();
 
-		name=document.getElementById("inputName_zayavka").value;
-		contact=document.getElementById("inputContact_zayavka").value;
-		$.post("sendmail.php", { nm: name, ml: '', pn:contact, type: 2}, function(data){	});
+		name=$("#inputName_zayavka").val();
+		contact=$("#inputContact_zayavka").val();
+		mail=$("#inputEmail_zayavka").val();
+		var slug=$('#slug').val();
+		$.post("sendmail.php", { nm: name, ml: mail, pn:contact, type: 2, slug:slug}, function(data){	});
 		setTimeout("$('#zayavka').modal('hide')",2000);
 		setTimeout("refresh_zayavka()",3000);
 		return true;
@@ -71,16 +74,17 @@ function send_order(id){
 	var isvalid, name, mail, phone;
 	isvalid= Validate(id);
 	if (isvalid) {	
-		name=document.getElementById("inputName_"+id).value;
-		// mail=document.getElementById("inputContact_"+id).value;
-		phone=document.getElementById("inputContact_"+id).value;
-		$.post("sendmail.php", { nm: name, ml: '', pn:phone, type: 2}, function(data){ });
-
+		name=$("#inputName_"+id).val();
+		mail=$("#inputEmail_"+id).val();
+		phone=$("#inputContact_"+id).val();
+		var slug=$('#slug').val();
+		$.post("sendmail.php", { nm: name, ml: mail, pn:phone, type: 2, slug:slug}, function(data){ });
 		$('#ordersent').modal('show');
 		setTimeout("$('#ordersent').modal('hide')",3000);
-		document.getElementById("inputName_"+id).value='';
-		document.getElementById("inputContact_"+id).value='';
-		// document.getElementById("inputPhone_"+id).value='';
+
+		$("#inputName_"+id).val('');
+		$("#inputContact_"+id).val('');
+		$("#inputEmail_"+id).val('');
 		return true;
 	}
 	else{
@@ -89,16 +93,16 @@ function send_order(id){
 }
 
 function refresh_backcall(){
-	document.getElementById("inputName_backcall").value="";
-	document.getElementById("inputContact_backcall").value="";
-	document.getElementById("backcall_success").style.display="none";
-	document.getElementById("backcall_form").style.display="block";	
+	$("#inputName_backcall").val('');
+	$("#inputContact_backcall").val('');
+	$("#backcall_success").hide();
+	$("#backcall_form").show();	
 	return true;
 }
 function refresh_zayavka(){
-	document.getElementById("inputName_zayavka").value="";
-	document.getElementById("inputContact_zayavka").value="";
-	document.getElementById("zayavka_success").style.display="none";
-	document.getElementById("zayavka_form").style.display="block";	
+	$("#inputName_zayavka").val('');
+	$("#inputContact_zayavka").val('');
+	$("#zayavka_success").hide();
+	$("#zayavka_form").show();
 	return true;
 }

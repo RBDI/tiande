@@ -2,9 +2,6 @@
 <html>
   <head>
     <title><? print $l_title; ?></title>
-	<meta name="description" content="На нашем сайте вы можете сделать заказ на аренду плазменных панелей и сопутствующего оборудования. Все плазменные панели новые и от ведущих производителей, доставка и монтаж по Москве бесплатно." />
-	<meta name="keywords" content="аренда плазмы, аренда плазменных панелей Москва, аренда плазменных панелей" />
-
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <!-- Bootstrap -->
     <link href="/css/bootstrap.css" rel="stylesheet" media="screen">
@@ -13,7 +10,7 @@
 
     <!-- <link rel="icon" type="image/png" href="favicon.png">    
     <link rel="shortcut icon" href="favicon.png" type="image/png" />  -->
-    <link rel="shortcut icon" href="images/favicon.ico"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
    
     
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -26,7 +23,7 @@
 
   </head>
 <body>
-  <? include "modals.php"; ?>
+  <? include $t_path."/modals.php"; ?>
 
 
 <!-- Header -->
@@ -164,8 +161,9 @@
       </div>
     </div>
 
+    <? next_block(); ?>
     <div class="row" style="margin-top:20px;">
-          <h3>В наших сервисных центрах всегда уютная атмосфера, а дружелюбные сотрудники<br> ответят на Ваши вопросы и помогут в выборе продукта!</h3>
+          <h3><? get_block_title(); ?></h3>
 
           <div class="col-sm-4">
             <img src="/simg/ph1.jpg" class="img-responsive img-circle">
@@ -178,11 +176,11 @@
             <img src="/simg/ph2.jpg" class="img-responsive img-circle">
           </div>
     </div>
-    <h3>Выбирая наши Сервисные и Дилерские Центры у Вас:<br>
-- нет рисков,  нет обязательств, продукция сертифицирована и гарантия возврата денег!</h3>
+    <h3><? get_block_text(); ?></h3>
   </div>
 </div>
 
+<? next_block(); ?>
 <div class="block4">
   <div class="container" >
     <div class="row">
@@ -190,17 +188,17 @@
         <img src="/simg/courier.png" class="img-responsive">
       </div>
       <div class="col-sm-9">
-        <h2  style="margin-top:40px;">Не нашли удобный для Вас адрес?<br>
-       Наш курьер быстро доставит Вам заказ!</h2>
+        <h2  style="margin-top:40px;"><? get_block_title(); ?></h2>
         <a class="btn btn-success btn-lg myfont" target="_blank" href="http://rustiande.ru">Заказать <i class="fa fa-angle-double-right"></i></a>
       </div>    
     </div>
   </div>
 </div>
 
+<? next_block(); ?>
 <div class="block2">
   <div class="container" align="center">
-    <h2 style="font-size:60px;">Стать умным покупателем прямо сейчас!</h2>
+    <h2 style="font-size:60px;"><? get_block_title(); ?></h2>
     <div class="row"  style="margin-top:40px;">
       <div class="col-sm-4">
         <img src="/simg/x1.jpg" class="img-responsive"  style="margin-top:40px;">
@@ -216,7 +214,7 @@
 </div>
 
 <? next_block(); ?>
-<div class="block3" style="background-image:url(<? print get_block_image();  ?>)">
+<div class="block3" style="background-image:url(<? print get_block_image(); ?>)">
   <div class="container">
     <h2><? get_block_title(); ?></h2>
     <p class="info"><? get_block_text(); ?></p>
@@ -245,6 +243,7 @@
         <? get_form(); ?>
       </div>
     </div>
+    <img src="/simg/om.png">
   </div>
 </div>
 
@@ -253,6 +252,7 @@
 <footer>
   <div style="float:right;"><a href="http://rbdi.ru" target="_blank">Создание сайта</a> - <strong>RBDI</strong></div>
   <? print date("Y"); ?> &copy; <? print $l_title; ?><br><? print $l_phone; ?><br>
+  <input type="hidden" id="slug" value="<? print $slug; ?>">
 </footer>
 
 

@@ -122,7 +122,7 @@ if ($_GET['copyland']!=''){
 			$page_id=$new_page_id;
 			$order=$value['order'];
 			$background=$value['background'];	
-			$sql="INSERT INTO `mylp_blocks` (`text`,`title`,`catch`,`page_id`,`order`) VALUES ('$text','$title','$catch','$page_id','$order')";
+			$sql="INSERT INTO `mylp_blocks` (`text`,`title`,`catch`,`page_id`,`order`,`background`) VALUES ('$text','$title','$catch','$page_id','$order','$background')";
 			mysql_query($sql) or die(mysql_error());
 			$new_block_id=mysql_insert_id();
 
@@ -136,7 +136,7 @@ if ($_GET['copyland']!=''){
 					$background=$child_value['background'];
 					$parent=$new_block_id;
 
-					$sql="INSERT INTO `mylp_blocks` (`text`,`title`,`catch`,`page_id`,`order`,`parent`) VALUES ('$text','$title','$catch','$page_id','$order','$parent')";
+					$sql="INSERT INTO `mylp_blocks` (`text`,`title`,`catch`,`page_id`,`order`,`parent`,`background`) VALUES ('$text','$title','$catch','$page_id','$order','$parent','$background')";
 					mysql_query($sql) or die(mysql_error());
 				}
 			}

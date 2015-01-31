@@ -5,6 +5,7 @@ function get_form(){
   global $N;
   $N++;
 ?>
+
 <div class="well" align="center">
 <h3>Отправьте заявку на получение карты умного покупателя</h3>
 <form class="form-horizontal" role="form">
